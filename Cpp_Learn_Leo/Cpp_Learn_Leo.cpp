@@ -5,14 +5,31 @@
 
 using namespace std; // Using the STANDARD namespace
 
-int main()
+void Damage(int value)
 {
-    cout << "Hello World!\n";
-    string answer;
-    cin >> answer;
-    cout << "yo slt " << answer;
-    
+    value -= 2;
+    cout << value << "\n";
 }
+
+void DamageAtPointer(int &value)
+{
+    value -= 2;
+    cout << value << "\n";
+}
+
+int main()
+{  
+    int life = 10;
+    cout << &life << "\n";
+
+    cout << life << "\n";
+    Damage(life);
+    cout << life << "\n";
+    DamageAtPointer(life);
+    cout << life << "\n";
+}
+
+
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
 // Déboguer le programme : F5 ou menu Déboguer > Démarrer le débogage
