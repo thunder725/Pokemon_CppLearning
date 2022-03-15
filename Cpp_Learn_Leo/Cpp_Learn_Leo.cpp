@@ -2,31 +2,60 @@
 //
 
 #include <iostream>
+#include <stdlib.h>
 
 using namespace std; // Using the STANDARD namespace
 
-void Damage(int value)
-{
-    value -= 2;
-    cout << value << "\n";
-}
-
-void DamageAtPointer(int &value)
-{
-    value -= 2;
-    cout << value << "\n";
-}
+//void Damage(int value)
+//{
+//    value -= 2;
+//    cout << value << "\n";
+//}
+//
+//void DamageAtPointer(int &value)
+//{
+//    value -= 2;
+//    cout << value << "\n";
+//}
 
 int main()
 {  
-    int life = 10;
+    /*int life = 10;
     cout << &life << "\n";
 
     cout << life << "\n";
     Damage(life);
     cout << life << "\n";
     DamageAtPointer(life);
-    cout << life << "\n";
+    cout << life << "\n";*/
+
+    srand(time(NULL));
+
+    float total = 0;
+    int maxRolls = 742793;
+
+    for (int i = 0; i < maxRolls; i++)
+    {
+        int rnd;
+        rnd = (rand() % 6 + 1) + (rand() % 6 + 1);
+
+        total += rnd;
+    }
+
+    total /= maxRolls;
+    cout << "The average roll after " << maxRolls << " rolls is " << total << "\n";
+
+    float errorPercentage;
+
+    errorPercentage = abs((7 - total)) / 7 * 100;
+
+    cout << "It is a deviation of " << errorPercentage << "% from the expected mean being 7" << "\n";
+
+    if (errorPercentage < 0.001)
+    {
+        cout << "DEVIATION UNDER THE TRIPLE DIGIT INCREDIBLE!!!!!!!!!\n==================[INCREDIBLE]==================\n";
+    }
+
 }
 
 
