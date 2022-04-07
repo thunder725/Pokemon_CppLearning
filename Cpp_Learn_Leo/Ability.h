@@ -1,5 +1,8 @@
 #pragma once
 #include <string>
+
+using namespace std;
+
 class Ability
 {
 
@@ -15,8 +18,8 @@ class Ability
 	// Attributes Getters
 
 private:
-	std::string aName;
-	std::string aDescription;
+	string aName;
+	string aDescription;
 	int aDamage;
 	// Assuming that there is only one type of energy
 	int aEnergyCost;
@@ -24,12 +27,13 @@ private:
 
 public:
 	Ability();
-	Ability(std::string name, std::string desc, int damage, int energyCost);
+	Ability(string name, string desc, int damage);
+	Ability(string name, string desc, int damage, int energyCost);
 
 	~Ability();
-	std::string GetAbilityName();
-	std::string GetAbilityDescription();
-	int getAbilityDamage();
-	int getEnergyCost();
+	string GetAbilityName();
+	string GetAbilityDescription();
+	int GetAbilityDamage();
+	int GetEnergyCost();
 
 };

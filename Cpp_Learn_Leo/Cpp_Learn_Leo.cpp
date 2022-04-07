@@ -1,8 +1,7 @@
-// Cpp_Learn_Leo.cpp : Ce fichier contient la fonction 'main'. L'exécution du programme commence et se termine à cet endroit.
-//
-
 #include <iostream>
 #include <stdlib.h>
+#include "Pokemon.h"
+#include "Battle.h"
 
 using namespace std; // Using the STANDARD namespace
 
@@ -29,7 +28,7 @@ int main()
     DamageAtPointer(life);
     cout << life << "\n";*/
 
-    srand(time(NULL));
+    /*srand(time(NULL));
 
     float total = 0;
     int maxRolls = 742793;
@@ -54,7 +53,33 @@ int main()
     if (errorPercentage < 0.001)
     {
         cout << "DEVIATION UNDER THE TRIPLE DIGIT INCREDIBLE!!!!!!!!!\n==================[INCREDIBLE]==================\n";
-    }
+    }*/
+
+    cout << "\n \n \n";
+
+    // cout << "============PIKACHU=============\n";
+    Pokemon pikachu = Pokemon("Pikachu", "chunky boi", 40);
+    // pikachu.DisplaySumUp();
+    // cout << "=========================\n";
+    // pikachu.petName = "Pika Pika";
+    // pikachu.Hurt(6);
+    // pikachu.Heal(12);
+    // pikachu.DisplaySumUp();
+    Ability thunderShock = Ability("Thunder Shock", "Goes bzzzz", 30, 2);
+    Ability gnaw = Ability("Gnaw", "Gnaws", 10);
+    // Ability cutie = Ability("Cutie Pie", "2 Cute 2 be true", 10);
+    pikachu.LearnAbility(thunderShock);
+    pikachu.LearnAbility(gnaw);
+    // pikachu.LearnAbility(cutie);
+
+    Pokemon staryu = Pokemon("Staryu", "Low-grade Power Ranger", 40);
+    Ability waterGun = Ability("Water Gun", "Shoots Water", 20);
+    Ability waterPulse = Ability("Water Pulse", "Water wave", 30);
+    staryu.LearnAbility(waterGun);
+    staryu.LearnAbility(waterPulse);
+
+    Battle newBattle = Battle(pikachu, staryu);
+    newBattle.StartBattle();
 
 }
 

@@ -19,6 +19,14 @@ Ability::Ability(string name, string desc, int damage, int energyCost)
 	aEnergyCost = energyCost;
 }
 
+Ability::Ability(string name, string desc, int damage)
+{
+	aName = name;
+	aDescription = desc;
+	aDamage = damage;
+	aEnergyCost = 0;
+}
+
 Ability::~Ability()
 {
 	//Empty until we have complex members
@@ -34,12 +42,12 @@ string Ability::GetAbilityDescription()
 	return aDescription;
 }
 
-int Ability::getAbilityDamage()
+int Ability::GetAbilityDamage()
 {
 	return aDamage;
 }
 
-int Ability::getEnergyCost()
+int Ability::GetEnergyCost()
 {
 	return aEnergyCost;
 }
