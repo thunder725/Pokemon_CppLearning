@@ -40,7 +40,7 @@ void Battle::NextTurn()
 
 		// 0 or 1 depending on how many it knows
 		int chosenAttack = rand() % bFighters[1]->GetNumbersOfAbilitiesLearned();
-		cout << "Opponent " << bFighters[1]->GetName() << " uses " << bFighters[1]->GetAbilityData(chosenAttack).GetAbilityName() << "\n";
+		cout << "The opposing " << bFighters[1]->GetName() << " uses " << bFighters[1]->GetAbilityData(chosenAttack).GetAbilityName() << "\n";
 		bFighters[0]->Hurt(bFighters[1]->GetAbilityData(chosenAttack).GetAbilityDamage());
 
 		// If dead then stop

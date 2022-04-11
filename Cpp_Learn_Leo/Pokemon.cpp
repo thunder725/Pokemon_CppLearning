@@ -107,7 +107,6 @@ void Pokemon::DisplayAbilities()
 	for (int a = 0; a < mAbilities.size(); a++)
 	{
 		cout << "\t*" << (a + 1) << " : " << mAbilities[a].GetAbilityName()
-			<< " | " << mAbilities[a].GetAbilityDescription()
 			<< " | dmg : " << mAbilities[a].GetAbilityDamage() << " hp.\n";
 	}
 }

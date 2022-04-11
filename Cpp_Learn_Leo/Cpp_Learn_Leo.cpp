@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "Pokemon.h"
 #include "Battle.h"
+#include "Trainer.h"
 
 using namespace std; // Using the STANDARD namespace
 
