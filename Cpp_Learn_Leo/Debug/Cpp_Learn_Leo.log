@@ -1,3 +1,1 @@
-﻿  Battle.cpp
-C:\ArtFX\Programmation\2nd Year\Pokemon_CppLearning\Cpp_Learn_Leo\Battle.cpp(39,13): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
-  Cpp_Learn_Leo.vcxproj -> C:\ArtFX\Programmation\2nd Year\Pokemon_CppLearning\Debug\Cpp_Learn_Leo.exe
+﻿C:\VisualStudio\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(439,5): error MSB8020: Les outils de génération pour v143 (ensemble d'outils de plateforme = 'v143') sont introuvables. Pour générer à l'aide des outils de génération v143, installez les outils de génération v143. Vous avez également la possibilité de mettre à niveau les outils Visual Studio actuels en sélectionnant le menu Projet ou en cliquant avec le bouton droit sur la solution, puis en sélectionnant "Recibler la solution".
